@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+  
+    <title>Projeto Estoque</title>
+    
+    <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'js/jquery.dataTables.min.js' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="{% url 'index' %}">
+            <img src={% static 'imagens/logo2.png' %} style="max-height: 90px" class="py-2" >
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="{% url 'index' %}">
+              <strong>Início</strong>
+            </a>
+            <a class="navbar-item" href="{% url 'produto:list_produto' %}">
+              <strong>Produto</strong>
+            </a>
+            <a class="navbar-item" href="{% url 'entrada:list_entrada' %}">
+              <strong>Entrada</strong>
+            </a>
+            <a class="navbar-item" href="{% url 'saida:list_saida' %}">
+              <strong>Saída</strong>
+            </a>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Registrar-se</strong>
+                </a>
+                <a class="button is-light">
+                  <strong>Entrar</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="box">
+        <h1><strong>Estoque</strong></h1>
+    </div>
+    <div class="container">
+        <div class="notification">
+            {% block product %}{% endblock %}
+        </div>
+      </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Projeto Estoque</strong> by Flávio Novaes. Apresentado como requisito para aprovação na disciplina <strong>Programação II</strong>.
+          </p>
+        </div>
+      </footer>
+</body>
+
+<script src="{% static 'js/jquery-3.7.0.min.js' %}"></script>
+<script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'js/js.js' %}"></script>
+</html>

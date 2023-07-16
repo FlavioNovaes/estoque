@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Estoque</title>
+    <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+</head>
+
+<body>
+    <section class="hero is-large is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1">
+                    <span class="tag is-light is-medium">Projeto</span>Estoque 
+                </h1>
+                <h2 class="subtitle is-4">
+                    <span class="tag is-light is-medium">Nome</span>Flávio Novaes
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns has-text-centered">
+                    <div class="column">
+                        <h1 class ="title">Produtos</h1>
+                        <h2 class="subtitle">Acesse a lista de produtos</h2>
+                        <a class="button is-primary" href="{% url 'produto:list_produto' %}">Acessar</a>
+                    </div>
+                    <div class="column">
+                        <h1 class="title">Entrada</h1>
+                        <h2 class="subtitle">Acesse a entrada de produtos</h2>
+                        <a class="button is-primary" href="{% url 'entrada:list_entrada' %}">Acessar</a>
+                    </div>
+                    <div class="column">
+                        <h1 class="title">Saída</h1>
+                        <h2 class="subtitle">Acesse a saída de produtos</h2>
+                        <a class="button is-primary" href="{% url 'saida:list_saida' %}">Acessar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Projeto Estoque</strong> by Flávio Novaes. Apresentado como requisito para aprovação na disciplina <strong>Programação II</strong>.
+          </p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+
+
+
