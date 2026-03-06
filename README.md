@@ -7,7 +7,7 @@ O projeto foi desenvolvido como parte dos meus estudos em **desenvolvimento web 
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Django](https://img.shields.io/badge/Django-Framework-green)
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-orange)
+![Status](https://img.shields.io/badge/Status-Estável-brightgreen)
 
 ---
 
